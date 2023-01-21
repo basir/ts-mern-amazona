@@ -34,4 +34,9 @@
    7. copy data.ts from frontend to backend
    8. create route for /api/products
    9. return products
-   10. run npm start
+   10. npm run dev
+9. Fetch Products From Backend
+   1. npm install axios
+   2. set axios base url
+   3. use effect hook
+   4. use reducer hook

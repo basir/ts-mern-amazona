@@ -1,3 +1,5 @@
+# TS MERN ECommerce Website
+
 Welcome to my coding course to build an e-commerce website like amazon by TypeScript . In this course You will learn the essential tools and skills to design, develop and deploy a fully-function website like amazon using MERN Stack by TypeScript language.
 
 My name is Basir and I’ll be your instructor in this course. I have 18 years of coding experience in international companies like ROI Vision in Montreal,
