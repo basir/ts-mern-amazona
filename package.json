@@ -1,0 +1,21 @@
+{
+  "name": "ts-mern-amazona",
+  "version": "1.0.0",
+  "description": "## Lessons",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd backend && npm install && npm run build  && cd ../frontend && npm install && npm run build",
+    "start": "TG_ALLOW_MIXED=ALLOW  node backend/build/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basir/ts-mern-amazona.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/basir/ts-mern-amazona/issues"
+  },
+  "homepage": "https://github.com/basir/ts-mern-amazona#readme"
+}

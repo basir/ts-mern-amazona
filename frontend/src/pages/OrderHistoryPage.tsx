@@ -4,6 +4,8 @@ import { useNavigate } from 'react-router-dom'
 import LoadingBox from '../components/LoadingBox'
 import MessageBox from '../components/MessageBox'
 import { useGetOrderHistoryQuery } from '../hooks/orderHooks'
+import { ApiError } from '../types/ApiError'
+import { getError } from '../utils'
 
 export default function OrderHistoryPage() {
   const navigate = useNavigate()
