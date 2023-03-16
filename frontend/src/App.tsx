@@ -3,6 +3,9 @@ import {
   Badge,
   Button,
   Container,
+  Form,
+  FormControl,
+  InputGroup,
   Nav,
   Navbar,
   NavDropdown,
@@ -49,6 +52,26 @@ function App() {
             <LinkContainer to="/" className="header-link">
               <Navbar.Brand>amazona</Navbar.Brand>
             </LinkContainer>
+            <Form className="flex-grow-1 d-flex me-auto">
+              <InputGroup>
+                <FormControl
+                  type="text"
+                  name="q"
+                  id="q"
+                  placeholder="Search Amazona"
+                  aria-label="Search Amazona"
+                  aria-describedby="button-search"
+                ></FormControl>
+                <Button
+                  variant="outline-primary"
+                  type="submit"
+                  id="button-search"
+                >
+                  <i className="fas fa-search"></i>
+                </Button>
+              </InputGroup>
+            </Form>
+
             <Navbar.Collapse>
               <Nav className="w-100 justify-content-end">
                 <Link
