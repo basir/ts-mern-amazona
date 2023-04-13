@@ -38,3 +38,23 @@ export const useSignupMutation = () =>
         })
       ).data,
   })
+
+export const useUpdateProfileMutation = () =>
+  useMutation({
+    mutationFn: async ({
+      name,
+      email,
+      password,
+    }: {
+      name: string
+      email: string
+      password: string
+    }) =>
+      (
+        await apiClient.put<UserInfo>(`api/users/profile`, {
+          name,
+          email,
+          password,
+        })
+      ).data,
+  })
