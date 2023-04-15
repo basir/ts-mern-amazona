@@ -14,3 +14,10 @@ export const useGetProductDetailsBySlugQuery = (slug: string) =>
     queryFn: async () =>
       (await apiClient.get<Product>(`api/products/slug/${slug}`)).data,
   })
+
+export const useGetCategoriesQuery = () =>
+  useQuery({
+    queryKey: ['categories'],
+    queryFn: async () =>
+      (await apiClient.get<[]>(`/api/products/categories`)).data,
+  })
