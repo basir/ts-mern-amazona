@@ -4,6 +4,7 @@
   "description": "## Lessons",
   "main": "index.js",
   "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\"  \"npm run dev --prefix frontend\" ",
     "build": "cd backend && npm install && npm run build  && cd ../frontend && npm install && npm run build",
     "start": "TG_ALLOW_MIXED=ALLOW  node backend/build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/basir/ts-mern-amazona/issues"
   },
-  "homepage": "https://github.com/basir/ts-mern-amazona#readme"
+  "homepage": "https://github.com/basir/ts-mern-amazona#readme",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
 }
