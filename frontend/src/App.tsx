@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react';
 import {
   Badge,
   Button,
@@ -10,44 +10,44 @@ import {
   Nav,
   Navbar,
   NavDropdown,
-} from 'react-bootstrap'
-import { Link, Outlet } from 'react-router-dom'
-import { LinkContainer } from 'react-router-bootstrap'
-import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import { Store } from './Store'
-import { useGetCategoriesQuery } from './hooks/productHooks'
-import LoadingBox from './components/LoadingBox'
-import MessageBox from './components/MessageBox'
-import { getError } from './utils'
-import { ApiError } from './types/ApiError'
-import SearchBox from './components/SearchBox'
+} from 'react-bootstrap';
+import { Link, Outlet } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { Store } from './Store';
+import { useGetProductCategoriesQuery } from './hooks/productHooks';
+import LoadingBox from './components/LoadingBox';
+import MessageBox from './components/MessageBox';
+import { getError } from './utils';
+import { ApiError } from './types/ApiError';
+import SearchBox from './components/SearchBox';
 
 function App() {
   const {
     state: { mode, cart, userInfo },
     dispatch,
-  } = useContext(Store)
+  } = useContext(Store);
 
   useEffect(() => {
-    document.body.setAttribute('data-bs-theme', mode)
-  }, [mode])
+    document.body.setAttribute('data-bs-theme', mode);
+  }, [mode]);
 
   const switchModeHandler = () => {
-    dispatch({ type: 'SWITCH_MODE' })
-  }
+    dispatch({ type: 'SWITCH_MODE' });
+  };
   const signoutHandler = () => {
-    dispatch({ type: 'USER_SIGNOUT' })
-    localStorage.removeItem('userInfo')
-    localStorage.removeItem('cartItems')
-    localStorage.removeItem('shippingAddress')
-    localStorage.removeItem('paymentMethod')
-    window.location.href = '/signin'
-  }
+    dispatch({ type: 'USER_SIGNOUT' });
+    localStorage.removeItem('userInfo');
+    localStorage.removeItem('cartItems');
+    localStorage.removeItem('shippingAddress');
+    localStorage.removeItem('paymentMethod');
+    window.location.href = '/signin';
+  };
 
-  const [sidebarIsOpen, setSidebarIsOpen] = useState(false)
+  const [sidebarIsOpen, setSidebarIsOpen] = useState(false);
 
-  const { data: categories, isLoading, error } = useGetCategoriesQuery()
+  const { data: categories, isLoading, error } = useGetProductCategoriesQuery();
 
   return (
     <div className="d-flex flex-column vh-100">
@@ -217,7 +217,7 @@ function App() {
         <div className="text-center">All rights reserved</div>
       </footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

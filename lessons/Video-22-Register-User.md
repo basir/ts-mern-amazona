@@ -29,7 +29,7 @@
 
    ```js
 
-    export const useSignupMutation = () =>
+    export const useSignUpMutation = () =>
    useMutation({
     mutationFn: async ({
       name,
@@ -70,7 +70,7 @@
         const { state, dispatch } = useContext(Store)
         const { userInfo } = state
 
-        const { mutateAsync: signup, isLoading } = useSignupMutation()
+        const { mutateAsync: signup, isLoading } = useSignUpMutation()
 
         const submitHandler = async (e: React.SyntheticEvent) => {
           e.preventDefault()

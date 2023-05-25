@@ -4,7 +4,7 @@
 
    ```js
 
-    export const useSigninMutation = () =>
+    export const useSignInMutation = () =>
       useMutation({
         mutationFn: async ({
           email,
@@ -38,7 +38,7 @@
         const { state, dispatch } = useContext(Store)
         const { userInfo } = state
 
-        const { mutateAsync: signin, isLoading } = useSigninMutation()
+        const { mutateAsync: signin, isLoading } = useSignInMutation()
 
         const submitHandler = async (e: React.SyntheticEvent) => {
           e.preventDefault()

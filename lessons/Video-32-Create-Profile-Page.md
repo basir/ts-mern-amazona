@@ -31,7 +31,7 @@
 2. userHooks.ts
 
    ```js
-      export const useUpdateProfileMutation = () =>
+      export const useUpdateUserProfileMutation = () =>
         useMutation({
           mutationFn: async ({
             name,
@@ -65,7 +65,7 @@
       const [password, setPassword] = useState('')
       const [confirmPassword, setConfirmPassword] = useState('')
 
-      const { mutateAsync: updateProfile, isLoading } = useUpdateProfileMutation()
+      const { mutateAsync: updateProfile, isLoading } = useUpdateUserProfileMutation()
 
       const submitHandler = async (e: React.SyntheticEvent) => {
         e.preventDefault()
